@@ -31,6 +31,7 @@ def pam_sm_authenticate(pamh, flags, argv):
         log_error(f"configuration error: {exc}")
         return PAM_AUTH_ERR
 
+    user = None  # Initialize to prevent NameError in exception handlers
     try:
         # Get username
         try:
