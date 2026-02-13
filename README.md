@@ -39,7 +39,7 @@ sudo apt-get install libpam-python
 # Clone and install into a dedicated directory
 sudo mkdir -p /opt/pam-oauth2
 cd /opt/pam-oauth2
-git clone https://github.com/yourorg/pam-oauth-py.git .
+git clone https://github.com/<GITHUB_ORG_OR_USERNAME>/pam-oauth-py.git .
 uv sync --frozen
 ```
 
