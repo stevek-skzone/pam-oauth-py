@@ -70,6 +70,7 @@ def write_cached_jwks(issuer: str, jwks: dict) -> None:
             try:
                 os.unlink(tmp_path)
             except OSError:
+                # Best-effort cleanup: ignore errors deleting temporary cache file
                 pass
             raise
     except OSError as exc:
