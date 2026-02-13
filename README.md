@@ -153,7 +153,7 @@ pam_oauth2[12345]: configuration error: issuer must use HTTPS: http://bad.exampl
 ### Setup
 
 ```bash
-git clone https://github.com/yourorg/pam-oauth-py.git
+git clone https://github.com/pam-oauth-py/pam-oauth-py.git
 cd pam-oauth-py
 uv sync
 ```
