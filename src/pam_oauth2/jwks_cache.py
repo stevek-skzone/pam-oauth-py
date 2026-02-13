@@ -65,7 +65,7 @@ def write_cached_jwks(issuer: str, jwks: dict) -> None:
                 json.dump(jwks, f)
             os.rename(tmp_path, _cache_path(issuer))
             log_debug("jwks cache written")
-        except BaseException:
+        except Exception:
             # Clean up temp file on any error
             try:
                 os.unlink(tmp_path)
