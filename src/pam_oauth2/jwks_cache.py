@@ -84,5 +84,6 @@ def invalidate_cache(issuer: str) -> None:
     try:
         os.unlink(path)
         log_debug("jwks cache invalidated")
-    except OSError:
-        pass
+    except OSError as exc:
+        # Cache invalidation failure is non-fatal
+        log_debug(f"jwks cache invalidation failed: {exc}")
